@@ -12,7 +12,7 @@ const Pagination = ({ count }: { count: number }) => {
   const page = searchParams.get("page") || "1";
 
   const params = new URLSearchParams(searchParams);
-  const ITEM_PER_PAGE = 2;
+  const ITEM_PER_PAGE = 15;
 
   const hasPrev = ITEM_PER_PAGE * (parseInt(page) - 1) > 0; // 0보다 크면 이전 페이지가 있다는 뜻
   const hasNext = ITEM_PER_PAGE * (parseInt(page) - 1) + ITEM_PER_PAGE < count; // 6은 총 페이지 수 (임의로 설정) 6개보다 작으면 다음 페이지가 있다는 뜻
